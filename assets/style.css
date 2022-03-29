@@ -68,7 +68,17 @@ body.wrong {
 }
 
 .start-btn, .next-btn {
-    font-size:large;
-    font-weight: bolder;
-    padding: 10px 20px;
+    font-size: large;
+    font-weight: bold;
+    padding:10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }
