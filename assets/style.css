@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+   --hue-correct: 145;
+   --hue-wrong: 0;
+
+}
+
+
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    background-color:aquamarine;
+}
+
+body.correct {
+   --hue:var(--hue-correct);
+}
+
+body.wrong {
+    --hue:var(--hue-wrong);
+
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,auto);
+    margin: 20px 0;
+}
+
+.btn {
+    background-color:black;
+    padding: 5px 10px;
+    color:darkorchid;
+}
+
+.btn:hover{
+    border-color: blue;
+}
+
+.btn.correct{
+    --hue:var(--hue-correct);
+    color: chartreuse;
+}
+
+.btn.wrong{
+    --hue:var(--hue-wrong);
+    color:brown;
+}
+
+.start-btn, .next-btn {
+    font-size:large;
+    font-weight: bolder;
+    padding: 10px 20px;
+}
