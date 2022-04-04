@@ -9,6 +9,8 @@ const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
+const Name_box = document.querySelector(".Name_box");
+const submit_btn = document.querySelector(".buttons .submit");
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -23,6 +25,7 @@ exit_btn.onclick = ()=>{
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
+    Name_box.classList.remove("activeName");
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
@@ -44,6 +47,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 // if restartQuiz button clicked
 restart_quiz.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
+    Name_box.classList.remove("activeName");
     result_box.classList.remove("activeResult"); //hide result box
     timeValue = 15; 
     que_count = 0;
@@ -144,10 +148,21 @@ function optionSelected(answer){
     }
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
+submit_btn.onclick = ()=>{
+    result_box.classList.remove("activeResult"); //show result box
+    Name_box.classList.add("activeName");//show Name box
+}
+
+function myFunction() {
+
+    document.getElementById("myForm").submit();
+
+  }
 
 function showResult(){
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
+    Name_box.classList.remove("activeName");
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 3){ // if user scored more than 3
@@ -210,3 +225,4 @@ function queCounter(index){
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
+

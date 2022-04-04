@@ -1,5 +1,4 @@
-/* importing google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -8,17 +7,18 @@
 }
 
 body{
-    background: #007bff;
+    background: pink;
 }
 
 ::selection{
     color: #fff;
-    background: #007bff;
+    background: palegreen;
 }
 
 .start_btn,
 .info_box,
 .quiz_box,
+.Name_box,
 .result_box{
     position: absolute;
     top: 50%;
@@ -30,6 +30,7 @@ body{
 
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
+.Name_box.activeName,
 .result_box.activeResult{
     opacity: 1;
     z-index: 5;
@@ -40,7 +41,7 @@ body{
 .start_btn button{
     font-size: 25px;
     font-weight: 500;
-    color: #007bff;
+    color: greenyellow;
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -136,7 +137,7 @@ body{
 }
 
 .quiz_box header .timer{
-    color: #004085;
+    color: purple;
     background: #cce5ff;
     border: 1px solid #b8daff;
     height: 45px;
@@ -163,7 +164,7 @@ body{
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
-    background: #343a40;
+    background: blueviolet;
     border: 1px solid #343a40;
     user-select: none;
 }
@@ -306,12 +307,31 @@ footer button.show{
     transform: scale(1);
 }
 
+.Name_box{
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+}
+
+
+
+
 .result_box{
     background: #fff;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
-    width: 450px;
+    width: px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -380,4 +400,13 @@ footer button.show{
 .buttons button.quit:hover{
     color: #fff;
     background: #007bff;
+}
+
+.buttons button.submit{
+    color: #fff;
+    background: #007bff;
+}
+
+.buttons button.submit:hover{
+    background: #0263ca;
 }

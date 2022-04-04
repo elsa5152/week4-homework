@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAweome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title> Quiz App</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    
 </head>
 <body>
-    <!-- start Quiz button -->
+    <!--  Quiz button -->
     <div class="start_btn"><button>Start Quiz</button></div>
 
     <!-- Info Box -->
@@ -23,6 +23,7 @@
             <div class="info">3. You can't select any option once time goes off.</div>
             <div class="info">4. You can't exit from the Quiz while you're playing.</div>
             <div class="info">5. You'll get points on the basis of your correct answers.</div>
+            <div class="info">6. You should submit your name for record.</div>
         </div>
         <div class="buttons">
             <button class="quit">Exit Quiz</button>
@@ -58,6 +59,17 @@
         </footer>
     </div>
 
+    <!-- Name Box -->
+    <div class="Name_box">
+        <p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+    
+        <form id="myForm" action="/action_page.php">
+              First name: <input type="text" name="fname"><br>
+              Last name: <input type="text" name="lname"><br><br>
+            <input type="button" onclick="myFunction()" value="Submit form">
+        </form>
+    </div>
+
     <!-- Result Box -->
     <div class="result_box">
         <div class="icon">
@@ -70,15 +82,17 @@
         <div class="buttons">
             <button class="restart">Replay Quiz</button>
             <button class="quit">Quit Quiz</button>
+            <button class="submit">Submit Result</button>
         </div>
     </div>
 
+
+
     <!-- Inside this JavaScript file I've inserted Questions and Options only -->
-    <script src="script.js"></script>
+    <script src="./assets/script.js"></script>
 
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
-    <script src="./script1.js"></script>
+    <script src="./assets/script1.js"></script>
 
 </body>
-</html>
 </html>
