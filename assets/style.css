@@ -7,6 +7,7 @@
 :root {
    --hue-correct: 145;
    --hue-wrong: 0;
+   --hue-neutral: 200;
 
 }
 
@@ -36,8 +37,10 @@ body.wrong {
     width: 800px;
     max-width: 80%;
     background-color: blanchedalmond;
+    box-shadow: 0 0 10px 2px;
     border-radius: 5px;
     padding: 10px;
+
 }
 
 .btn-grid {
@@ -48,6 +51,7 @@ body.wrong {
 }
 
 .btn {
+    --hue: var(--hue-neutral);
     background-color:black;
     padding: 5px 10px;
     color:darkorchid;
@@ -68,7 +72,7 @@ body.wrong {
 }
 
 .start-btn, .next-btn {
-    font-size: large;
+    font-size: 1.5rem;
     font-weight: bold;
     padding:10px 20px;
 }
